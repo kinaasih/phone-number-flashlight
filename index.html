@@ -1,0 +1,239 @@
+<div class="flashlight"></div>
+
+<body>
+	<h1 class="message1">Select your phone number</h1>
+	<p class="message2"> Use the flashlight to find each number</p>
+	<input type="button" class="reset" value="reset" id="reset"></input>
+	<input type="button" id="btn0" value="0" class="text0">
+	<p class="output" id="out1"></p>
+	<input type="button" id="btn1" value="1" class="text1">
+	<input type="button" id="btn2" value="2" class="text2">
+	<input type="button" id="btn3" value="3" class="text3">
+	<input type="button" id="btn4" value="4" class="text4">
+	<input type="button" id="btn5" value="5" class="text5">
+	<input type="button" id="btn6" value="6" class="text6">
+	<input type="button" id="btn7" value="7" class="text7">
+	<input type="button" id="btn8" value="8" class="text8">
+	<input type="button" id="btn9" value="9" class="text9">
+</body>
+
+<style>
+    body {
+	background-color: black;
+	height: 100vh;
+	width: 100vw;
+}
+.output {
+	font: 3.5em Trebuchet MS;
+	color: white;
+	position: fixed;
+	top: 375px;
+	left: 550px;
+}
+.message1 {
+	font: 2em Trebuchet MS;
+	color: white;
+	position: fixed;
+	top: 300px;
+	left: 550px;
+}
+.message2 {
+	font: 1.5em Trebuchet MS;
+	color: gray;
+	position: fixed;
+	top: 340px;
+	left: 550px;
+}
+.reset {
+	width: 100px;
+	height: 50px;
+	font: 1.5em Trebuchet MS;
+	background-color: white;
+	color: black;
+	border-color: transparent;
+	border-radius: 5%;
+	position: fixed;
+	top: 330px;
+	left: 1100px;
+}
+.flashlight {
+	width: 45px;
+	height: 45px;
+	background-color: white;
+	box-shadow: 0 0 20px 20px white, 0 0 35px 50px white;
+	border-radius: 50%;
+	position: fixed;
+	top: 200px;
+	left: 200px;
+	transform: translate(-50%, -50%);
+}
+.text0 {
+	font: 2em Trebuchet MS;
+	font-weight: bold;
+	background-color: transparent;
+	border-color: transparent;
+	color: black;
+	position: fixed;
+	top: 600px;
+	left: 10px;
+}
+.text1 {
+	font: 2em Trebuchet MS;
+	font-weight: bold;
+	background-color: transparent;
+	border-color: transparent;
+	color: black;
+	position: fixed;
+	top: 500px;
+	left: 1900px;
+}
+.text2 {
+	font: 2em Trebuchet MS;
+	font-weight: bold;
+	background-color: transparent;
+	border-color: transparent;
+	color: black;
+	position: fixed;
+	top: 280px;
+	left: 1200px;
+}
+.text3 {
+	font: 2em Trebuchet MS;
+	font-weight: bold;
+	background-color: transparent;
+	border-color: transparent;
+	color: black;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+}
+.text4 {
+	font: 2em Trebuchet MS;
+	font-weight: bold;
+	background-color: transparent;
+	border-color: transparent;
+	color: black;
+	position: fixed;
+	top: 250px;
+	left: 1550px;
+}
+.text5 {
+	font: 2em Trebuchet MS;
+	font-weight: bold;
+	background-color: transparent;
+	border-color: transparent;
+	color: black;
+	position: fixed;
+	top: 50px;
+	left: 1500px;
+}
+.text6 {
+	font: 2em Trebuchet MS;
+	font-weight: bold;
+	background-color: transparent;
+	border-color: transparent;
+	color: black;
+	position: fixed;
+	top: 70px;
+	left: 700px;
+}
+.text7 {
+	font: 2em Trebuchet MS;
+	font-weight: bold;
+	background-color: transparent;
+	border-color: transparent;
+	color: black;
+	position: fixed;
+	top: 15px;
+	left: 400px;
+}
+.text8 {
+	font: 2em Trebuchet MS;
+	font-weight: bold;
+	background-color: transparent;
+	border-color: transparent;
+	color: black;
+	position: fixed;
+	top: 20px;
+	left: 1200px;
+}
+.text9 {
+	font: 2em Trebuchet MS;
+	font-weight: bold;
+	background-color: transparent;
+	border-color: transparent;
+	color: black;
+	position: fixed;
+	top: 250px;
+	left: 550px;
+}
+</style>
+
+<script>
+    var body = document.querySelector("body");
+var flashlight = document.querySelector(".flashlight");
+
+body.addEventListener("mousemove", function (event) {
+	var x = event.clientX;
+	var y = event.clientY;
+	console.log("x:${x}, y:${y}");
+	flashlight.style.top = y + "px";
+	flashlight.style.left = x + "px";
+});
+const button0 = document.getElementById("btn0");
+const button1 = document.getElementById("btn1");
+const button2 = document.getElementById("btn2");
+const button3 = document.getElementById("btn3");
+const button4 = document.getElementById("btn4");
+const button5 = document.getElementById("btn5");
+const button6 = document.getElementById("btn6");
+const button7 = document.getElementById("btn7");
+const button8 = document.getElementById("btn8");
+const button9 = document.getElementById("btn9");
+const output1 = document.getElementById("out1");
+const resetbutton = document.getElementById("reset");
+function function0() {
+	out1.innerHTML = out1.innerHTML + button0.value;
+}
+function function1() {
+	out1.innerHTML = out1.innerHTML + button1.value;
+}
+function function2() {
+	out1.innerHTML = out1.innerHTML + button2.value;
+}
+function function3() {
+	out1.innerHTML = out1.innerHTML + button3.value;
+}
+function function4() {
+	out1.innerHTML = out1.innerHTML + button4.value;
+}
+function function5() {
+	out1.innerHTML = out1.innerHTML + button5.value;
+}
+function function6() {
+	out1.innerHTML = out1.innerHTML + button6.value;
+}
+function function7() {
+	out1.innerHTML = out1.innerHTML + button7.value;
+}
+function function8() {
+	out1.innerHTML = out1.innerHTML + button8.value;
+}
+function function9() {
+	out1.innerHTML = out1.innerHTML + button9.value;
+}
+function clear() {
+	out1.innerHTML = "";
+}
+btn0.addEventListener("click", function0);
+btn1.addEventListener("click", function1);
+btn2.addEventListener("click", function2);
+btn3.addEventListener("click", function3);
+btn4.addEventListener("click", function4);
+btn5.addEventListener("click", function5);
+btn6.addEventListener("click", function6);
+btn7.addEventListener("click", function7);
+btn8.addEventListener("click", function8);
+btn9.addEventListener("click", function9);
+resetbutton.addEventListener("click", clear);
+</script>
